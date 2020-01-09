@@ -1,0 +1,6 @@
+public/
+assets/
+.DS_Store
+vendor/
+.idea/
+.vscode
