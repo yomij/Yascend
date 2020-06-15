@@ -35,7 +35,9 @@
 
  默认情况下，ESLint 会在所有父级目录里寻找配置文件，一直到根目录。 
 
-### 3. 配置项，常用
+ 另外，你可以配置`.eslintignore`文件选择忽略某些文件和目录。
+
+### 3. 配置项(常用)
 
    1. parser --> 解析器, 可用项:
       > +  [Espree](https://github.com/eslint/espree)，默认
@@ -91,7 +93,7 @@
       }
       ```
       
-      开发插件？这里有个简单[例子](https://www.jianshu.com/p/e6ee3f64e2ce)，文档详见[这里](https://eslint.bootcss.com/docs/developer-guide/working-with-plugins)。
+      开发插件？这里有个简单[例子](https://www.jianshu.com/p/e6ee3f64e2ce)，开发文档详见[这里](https://eslint.bootcss.com/docs/developer-guide/working-with-plugins)。
 
    5.  rules，校验规则
 
@@ -146,5 +148,93 @@
            ]
          }
          ```
+         
+      4. 全部rules配置项，可以查看[这里](https://eslint.bootcss.com/docs/rules/)
       
+   6. extends，继承规则
+
+         1. 属性值可以是：
+            + 指定配置的字符串(配置文件的路径、可共享配置的名称、`eslint:recommended` 或 `eslint:all`（启用当前安装的eslint所有核心规则，会随版本变更）)
+            + 字符串数组：每个配置继承它前面的配置
+         2. rules属性变更继承规则：
+            +  可以启用额外的规则
+            +  可以改变继承的规则级别而不改变它的选项 , 如 error -> warm
+            +  可以覆盖基础配置中的规则的选项，如：  `["error", "single", "avoid-escape"]`  ->  `["error", "single"]`
+         3. 继承插件的规则, 值： plugin: [ 包名 (省略了前缀，比如，react) ]/[ 配置名称 ], 如：`plugin:react/recommended`
+
+   7.  overrides， 可以进行更精细的配置，如，为一个目录下的不同文件配置不同的规则
+
+      ​	*除了root属性外，其他有效配置选项都被允许*
+
+      ```javascript
+      // 例子
+      {
+        "rules": {
+          "quotes": ["error", "double"]
+        },
       
+        "overrides": [
+          {
+            "files": ["bin/*.js", "lib/*.js"],
+            "excludedFiles": "*.test.js",
+            "rules": {
+              "quotes": ["error", "single"]
+            }
+          }
+        ]
+      }
+      ```
+
+### 4.简单配置
+
+1. ts配置
+
+   ```javascript
+   // .eslintrc.js
+   module.exports = {
+     "extends": ["airbnb-base", "plugin:@typescript-eslint/recommended"],
+     "parser": "@typescript-eslint/parser",
+     "plugins": ["@typescript-eslint"],
+     "env": {
+       "browser": true
+     },
+     "rules": {
+       "no-console": "off",
+       "@typescript-eslint/indent": ["error", 2],
+       "@typescript-eslint/no-var-requires": "off",
+       "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+     }
+   };
+   ```
+
+2. vue配置
+
+   ```javascript
+   // .eslintrc.js
+   module.exports = {
+     'root': true,
+     'env': {
+       'browser': true,
+     },
+     'extends': [
+       'plugin:vue/essential',
+       '@vue/standard',
+     ],
+     'rules': {
+       'space-before-function-paren': 0,
+       'indent': 'off',
+       'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+       'avoidEscape': true,
+       'quotes': ['error', 'single', { 'avoidEscape': true }],
+       'comma-dangle': ['error', 'always-multiline'],
+       'block-spacing': ['error', 'always'],
+       'array-bracket-spacing': ['error', 'always', { 'objectsInArrays': false }]
+     },
+     'parserOptions': {
+       'parser': 'babel-eslint'
+     },
+   }
+   ```
+
+   
+
