@@ -1,6 +1,9 @@
-// Question:
-// 返回 A 的最短的非空连续子数组的长度，该子数组的和至少为 K 。
-// 如果没有和至少为 K 的非空子数组，返回 -1 。
+/**
+ * Date: 2020/06/28
+ * Question:
+  返回 A 的最短的非空连续子数组的长度，该子数组的和至少为 K 。
+  如果没有和至少为 K 的非空子数组，返回 -1 。
+ */
 
 /**
  * 暴力解法-超时
@@ -55,7 +58,7 @@ var shortestSubarray = function (A, K) {
   return ans > A.length ? -1 : ans
 };
 
-// 参考解放
+// 参考解法
 /**
  * @param {number[]} A
  * @param {number} K
