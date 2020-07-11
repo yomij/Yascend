@@ -14,6 +14,7 @@
 
 
 /**
+ * @description 取数组中间的数做根节点，递归建树即可
  * @param {number[]} nums
  * @return {TreeNode}
  */
@@ -25,3 +26,8 @@ var sortedArrayToBST = function(nums) {
   root.right = sortedArrayToBST(nums.slice(mid + 1))
   return root
 };
+
+function TreeNode(val) {
+   this.val = val;
+   this.left = this.right = null;
+}

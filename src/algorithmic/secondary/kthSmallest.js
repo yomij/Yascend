@@ -16,6 +16,7 @@
  */
 
 /**
+ * @description 这里用的是归并排序的思路，排序后取值
  * @param {number[][]} matrix
  * @param {number} k
  * @return {number}

@@ -7,7 +7,7 @@
 
 
 /**
- * 滑动窗口求解
+ * @description 滑动窗口求解
  * @param {number} s
  * @param {number[]} nums
  * @return {number}

@@ -10,9 +10,9 @@
  */
 
 /**
+ * @description 利用栈维护一个匹配成功的数组,结果就是匹配成功的数组中最长的子项的长度
  * @param {string} s
  * @return {number}
- * @description 利用栈维护一个匹配成功的数组,结果就是匹配成功的数组中最长的子项的长度
  */
 var longestValidParentheses = function(s) {
   let list = []

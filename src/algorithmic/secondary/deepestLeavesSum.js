@@ -12,6 +12,7 @@
  */
 
 /**
+ * @description 遍历树，将树的各层保存为数组，最后计算和
  * @param {TreeNode} root
  * @return {number}
  */

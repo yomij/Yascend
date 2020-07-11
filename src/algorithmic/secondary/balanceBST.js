@@ -14,6 +14,7 @@
  */
 
 /**
+ * @description 先中序遍历树，之后以中序遍历结果构建平衡二叉树
  * @param {TreeNode} root
  * @return {TreeNode}
  */

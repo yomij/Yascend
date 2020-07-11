@@ -20,6 +20,7 @@
  */
 
 /**
+ * @description 遍历树，当遍历的当前节点值等于第一个要匹配的节点值时，开始新的遍历，以判断是否存在匹配的路径
  * @param {ListNode} head
  * @param {TreeNode} root
  * @return {boolean}

@@ -30,7 +30,7 @@ var shortestSubarray = function (A, K) {
 };
 
 /**
- * 正解
+ * @description
  * @param {number[]} A
  * @param {number} K
  * @return {number}

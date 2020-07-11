@@ -7,6 +7,7 @@
 
 
 /**
+ * @description 这里用的是set去重
  * @param {number[]} nums
  * @return {number}
  */

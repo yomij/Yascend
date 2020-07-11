@@ -7,6 +7,7 @@
  */
 
 /**
+ * @description 先排序后获取第k个最大元素，这里用的是快排
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
