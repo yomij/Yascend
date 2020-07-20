@@ -1,5 +1,6 @@
 /**
  * Date: 2020/07/03
+ * Tag: Tree
  * Question:
  *  108. 将有序数组转换为二叉搜索树
  *  将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。
@@ -14,6 +15,7 @@
 
 
 /**
+ * @description 取数组中间的数做根节点，递归建树即可
  * @param {number[]} nums
  * @return {TreeNode}
  */
@@ -25,3 +27,8 @@ var sortedArrayToBST = function(nums) {
   root.right = sortedArrayToBST(nums.slice(mid + 1))
   return root
 };
+
+function TreeNode(val) {
+   this.val = val;
+   this.left = this.right = null;
+}

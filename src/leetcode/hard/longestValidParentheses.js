@@ -1,5 +1,6 @@
 /**
  * Date: 2020/07/04
+ * Date: Stack
  * Question:
  *  32. 最长有效括号
  *  给定一个只包含 '(' 和 ')' 的字符串，找出最长的包含有效括号的子串的长度。
@@ -10,9 +11,9 @@
  */
 
 /**
+ * @description 利用栈维护一个匹配成功的数组,结果就是匹配成功的数组中最长的子项的长度
  * @param {string} s
  * @return {number}
- * @description 利用栈维护一个匹配成功的数组,结果就是匹配成功的数组中最长的子项的长度
  */
 var longestValidParentheses = function(s) {
   let list = []

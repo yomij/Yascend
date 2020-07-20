@@ -1,5 +1,6 @@
 /**
  * Date: 2020/07/03
+ * Tag: Tree
  * Question:
  *  1302. 层数最深叶子节点的和
  *  给你一棵二叉树，请你返回层数最深的叶子节点的和。
@@ -12,6 +13,7 @@
  */
 
 /**
+ * @description 遍历树，将树的各层保存为数组，最后计算和
  * @param {TreeNode} root
  * @return {number}
  */

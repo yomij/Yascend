@@ -1,5 +1,6 @@
 /**
  * Date: 2020/07/06
+ * Tag: Tree
  * Question:
  *  1367. 二叉树中的列表
  *  给你一棵以 root 为根的二叉树和一个 head 为第一个节点的链表。
@@ -20,6 +21,7 @@
  */
 
 /**
+ * @description 遍历树，当遍历的当前节点值等于第一个要匹配的节点值时，开始新的遍历，以判断是否存在匹配的路径
  * @param {ListNode} head
  * @param {TreeNode} root
  * @return {boolean}
