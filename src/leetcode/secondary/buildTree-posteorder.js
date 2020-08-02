@@ -2,7 +2,7 @@
  * Date: 2020/07/26
  * Tag: Tree
  * Question:
- *  106. 从中序与后序遍历序列构造二叉树
+ *  106. 从中序与后序遍历序列构造二叉树 (同：剑指 Offer 07. 重建二叉树)
  *   根据一棵树的中序遍历与后序遍历构造二叉树。
  *   注意: 你可以假设树中没有重复的元素。
  *
@@ -32,7 +32,7 @@
 var buildTree = function(inorder, postorder) {
   return buildHelper(inorder, postorder)
 };
-
+尾巴
 function buildHelper(inorder, postorder) {
   // 没有元素直接返回null
   if (!postorder.length) return null
