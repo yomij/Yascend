@@ -16,22 +16,22 @@
  * @return {number[]}
  */
 var dailyTemperatures = function(T) {
-  let t = [] // 栈
-  let indexList = [] // 下标数组
-  let result = [] // 结果
+  let t = []
+  let indexList = []
+  let result = []
   for (let index in T) {
     let item = T[index]
     while (t.length) {
-      if (t[0] < item) {
-        result[indexList[0]] = index - indexList[0]
-        t.shift()
-        indexList.shift()
+      if (t[t.length - 1] < item) {
+        let i = indexList.pop()
+        result[i] = index - i
+        t.pop()
       } else {
         break
       }
     }
-    t.unshift(item)
-    indexList.unshift(index)
+    t.push(item)
+    indexList.push(index)
     result.push(0)
   }
   return result
