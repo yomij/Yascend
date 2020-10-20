@@ -121,15 +121,6 @@ class Trie {
   }
 }
 
-let trie = new Trie()
+// let trie = new Trie()
 
-// test
-trie.add('a')
-trie.add('ab')
-trie.add('abc')
-trie.add('abcedddsadas')
-trie.add('abcdddsadas')
-console.log(trie.getWordAll())
-trie.remove('ab')
-console.log(trie.getWordAll())
-console.log(trie.startWithWords('abcd'))
+export default Trie
