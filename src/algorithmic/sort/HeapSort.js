@@ -21,4 +21,4 @@ function heapSort (arr) {
   return arr
 }
 
-console.log(heapSort([9, 3, 6, 7, -1, -123]))
+module.exports = heapSort

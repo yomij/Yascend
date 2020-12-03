@@ -1,5 +1,5 @@
 /**
- * 快速排序
+ * 快速排序 - 交换排序
  *
  * 1. 从数列中挑出一个元素，称为 “基准”（pivot）
  * 2. 重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。
@@ -39,4 +39,5 @@ function quickSort(arr, i, j) {
   quickSort(arr, guard + 1, j)
   return arr
 }
-console.log(quickSort([323, 2, 112, 7, 8, -1, 100, -23, -111111], 0 ,8))
+
+module.exports = quickSort
