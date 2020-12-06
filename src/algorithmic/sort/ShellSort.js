@@ -7,13 +7,13 @@
  */
 
 function shellSort(arr) {
-  for (let gap = arr.length; gap > 0; gap = gap >> 1) {
-    for (let i = 2 * gap, j = arr.length; i < j; i++) {
+  for (let gap = arr.length >> 1; gap > 0; gap = gap >> 1) {
+    for (let i = gap * 2, j = arr.length; i < j; i++) {
       let cur = arr[i]
       let k = i
-      while (k >= 1 && arr[k - 1] > cur) {
-        arr[k] = arr[k - 1]
-        k--
+      while (k - gap >= 0 && arr[k - gap] > cur) {
+        arr[k] = arr[k - gap]
+        k = k - gap
       }
       arr[k] = cur
     }
