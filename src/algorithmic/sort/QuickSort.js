@@ -17,23 +17,17 @@ function quickSort(arr, i, j) {
   let right = j
   while (left < right) {
     // 从后往前找小的
-    while(left < right) {
-      if (arr[right] < arr[guard]) {
-        swap(arr, right, guard)
-        guard = right
-        break
-      }
+    while(left < right && arr[right] >= arr[guard]) {
       right--
     }
+    swap(arr, right, guard)
+    guard = right
     // 从前往后找大的
-    while(left < right) {
-      if (arr[left] > arr[guard]) {
-        swap(arr, left, guard)
-        guard = left
-        break
-      }
+    while(left < right && arr[left] <= arr[guard]) {
       left++
     }
+    swap(arr, left, guard)
+    guard = left
   }
   quickSort(arr, i, guard - 1)
   quickSort(arr, guard + 1, j)
