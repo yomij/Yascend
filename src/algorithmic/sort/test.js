@@ -3,6 +3,7 @@ const HeapSort = require('./HeapSort')
 const InsertionSort = require('./InsertionSort')
 const QuickSort = require('./QuickSort')
 const ShellSort = require('./ShellSort')
+const MergeSort = require('./MergeSort')
 
 const getRandomArr = function (length) {
   let arr = []
@@ -23,11 +24,12 @@ function run(arr, name = '', fn = () => void 0,time = 10000) {
 }
 
 const sorts = {
-  BubbleSort,
+  // BubbleSort,
   HeapSort,
-  InsertionSort,
+  // InsertionSort,
   QuickSort,
   ShellSort,
+  MergeSort,
 }
 
 console.time('makeArr')
